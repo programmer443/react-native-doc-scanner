@@ -1,0 +1,84 @@
+{
+  "name": "react-native-doc-scanner",
+  "version": "0.1.0",
+  "description": "Real-time AI document scanner for React Native — VisionCamera + ONNX Runtime document detection, OpenCV quality analysis, and PaddleOCR (RapidOCR/ONNX) field extraction for passports, driving licences, and ID cards.",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index.ts",
+  "source": "src/index.ts",
+  "files": [
+    "src",
+    "lib",
+    "ios",
+    "android/src",
+    "android/build.gradle",
+    "nitrogen",
+    "nitro.json",
+    "assets/models",
+    "react-native-doc-scanner.podspec",
+    "!ios/build",
+    "!android/build",
+    "!android/.cxx",
+    "!**/__tests__"
+  ],
+  "scripts": {
+    "build": "bob build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "jest",
+    "specs": "tsc --noEmit && nitrogen",
+    "prepare": "bob build"
+  },
+  "keywords": [
+    "react-native",
+    "document-scanner",
+    "vision-camera",
+    "onnx",
+    "opencv",
+    "ocr",
+    "mrz",
+    "passport-scanner",
+    "id-scanner"
+  ],
+  "license": "MIT",
+  "author": "Muhammad Ahmad",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programmer443/react-native-doc-scanner.git"
+  },
+  "homepage": "https://github.com/programmer443/react-native-doc-scanner#readme",
+  "bugs": {
+    "url": "https://github.com/programmer443/react-native-doc-scanner/issues"
+  },
+  "peerDependencies": {
+    "@shopify/react-native-skia": ">=1.5.0",
+    "react": "*",
+    "react-native": "*",
+    "react-native-gesture-handler": ">=2.14.0",
+    "react-native-mmkv": ">=4.0.0",
+    "react-native-nitro-modules": ">=0.35.0",
+    "react-native-reanimated": ">=3.10.0",
+    "react-native-vision-camera": ">=5.0.0",
+    "react-native-vision-camera-worklets": ">=5.0.0"
+  },
+  "dependencies": {
+    "zustand": "^5.0.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "nitrogen": "^0.35.5",
+    "react-native-builder-bob": "^0.35.3",
+    "typescript": "^5.6.3"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      ["commonjs", { "esm": true }],
+      ["module", { "esm": true }],
+      "typescript"
+    ]
+  }
+}
