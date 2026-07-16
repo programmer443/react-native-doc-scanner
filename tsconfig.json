@@ -15,7 +15,7 @@
     "declaration": true,
     "declarationMap": true,
     "noEmit": true,
-    "types": ["react", "react-native", "jest", "node"]
+    "types": ["react", "react-native", "node"]
   },
   "include": ["src"],
   "exclude": ["lib", "node_modules", "**/__tests__/**"]
